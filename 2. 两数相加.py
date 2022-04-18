@@ -101,8 +101,3 @@ s = Solution()
 l1 = s.setListNode(a)
 l2 = s.setListNode(b)
 print(s.addTwoNumbers(l1, l2))
-
-
-
-
-print(Solution().addTwoNumbers(l1, l2))
