@@ -6,14 +6,14 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        profit = 0
-        p1 = 0
-        p2 = len(prices) - 1
-        for i in range(len(prices)):
-            for j in range(i, len(prices)):
-                if prices[j] - prices[i] > profit:
-                    profit = prices[j] - prices[i]
-        return profit
+        minprice = max(prices)
+        maxprofit = 0
+        for p in prices:
+            if p < minprice:
+                minprice = p
+            if p - minprice > maxprofit:
+                maxprofit = p - minprice
+        return maxprofit
 #prices = [7,1,5,3,6,4]
 #prices = [7,6,4,3,1]
 with open(r'prices1.txt', 'r') as f:
